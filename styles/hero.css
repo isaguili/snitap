@@ -2,8 +2,13 @@
   max-width: 80em;
   width: 100%;
   padding: 2.5rem 2rem;
+  margin-inline: auto;
 
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
 
   & h1 {
     max-width: 40rem;
@@ -32,7 +37,104 @@
 
   h1 span {
     display: block;
-    animation: slideUp 6s infinite;
+    animation: slideUp 5s 2s infinite;
+  }
+
+  & .buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    & .button {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      
+      text-transform: uppercase;
+
+      border-radius: 5rem;
+
+      transition: transform .35s;
+
+      &.buy {
+        padding: 1.5rem 3rem;
+        background-color: var(--snitap-sun);
+      }
+
+      &.play span {
+        display: flex;
+        padding: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--backgroud);
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    & .shadow { 
+        box-shadow: 
+        0 57px 16px 0 rgba(0, 0, 0, 0.00), 
+        0 36px 15px 0 rgba(0, 0, 0, 0.01), 
+        0 20px 12px 0 rgba(0, 0, 0, 0.05), 
+        0 9px 9px 0 rgba(0, 0, 0, 0.09), 
+        0 2px 5px 0 rgba(0, 0, 0, 0.10);
+      }
+  }
+
+  & > div:nth-child(2) {
+    display: block;
+    width: 100%;
+    max-width: 30.5rem;
+    height: 30.5rem;
+
+
+    & .content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      & img {
+        position: absolute;
+        width: 100%;
+      }
+
+      & img[src*="ellipse"] {
+        width: 94%;
+        top: 3%;
+        left: 3%;
+
+        transform: translateX(200%);
+        animation: slideIn 3s 200ms ease forwards;
+      }
+
+      & img[src*="patins"] {
+        z-index: 1;
+
+        transform: translateX(200%);
+        animation: slideIn 3s ease forwards;
+      }
+
+      & img[src*="stars-1"] {
+        max-width: 5.5rem;
+        top: 30%;
+        z-index: 0;
+
+        opacity: 0;
+        transform: translateX(400%);
+        animation: slideIn 2s 800ms ease both, appear 100ms 800ms both;
+      }
+
+      & img[src*=stars-2] {
+        max-width: 2.5rem;
+        right: 0;
+        top: 35%;
+
+        transform: translateX(400%);
+        animation: slideIn 2.2s ease 800ms both;
+      }
+    }
   }
 
 }
@@ -100,5 +202,20 @@
  
   100% {
     transform: translateY(-15rem);
+  }
+}
+
+@keyframes slideIn {
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
   }
 }
