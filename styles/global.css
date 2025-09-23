@@ -1,0 +1,33 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --snitap-sun: #FFCD1E;
+  --snitap-sky-mid: #06B6D4;
+  --snitap-sky-light: #67E8F9;
+  --snitap-joy-mid: #DB2777; 
+  --snitap-joy-light: #F472B6;
+  --snitap-leaf-mid: #16A34A;
+
+  --backgroud: #fafafa;
+
+  --text-xl: 700 4rem/125% 'Syne', sans-serif; 
+  --text-lg: 700 2.5rem/120% 'Syne', sans-serif;
+  --text-base: 500 1rem/150% 'Montserrat', sans-serif; 
+  --text-sm: 500 .875rem/150% 'Montserrat', sans-serif; 
+}
+
+html {
+  font: var(--text-base);
+}
+
+h1 {
+  font: var(--text-xl);
+}
+
+h2 {
+  font: var(--text-lg);
+}
