@@ -18,6 +18,7 @@
   --text-lg: 700 2.5rem/120% 'Syne', sans-serif;
   --text-base: 500 1rem/150% 'Montserrat', sans-serif; 
   --text-sm: 500 .875rem/150% 'Montserrat', sans-serif; 
+  --text-logo: 700 1.25rem/130% 'Syne', sans-serif;
 }
 
 html {
