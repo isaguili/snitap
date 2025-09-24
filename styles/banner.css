@@ -3,6 +3,7 @@ body {
 }
 
 #banner {
+  margin-block: 2.5rem;
   
  & .scroller {
   display: flex;
@@ -60,4 +61,8 @@ body {
   
 }
 
-
+@media (width<80em) {
+  #banner {
+    margin-block: 2rem;
+  } 
+}

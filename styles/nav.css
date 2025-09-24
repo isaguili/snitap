@@ -42,3 +42,9 @@ nav {
     font: var(--text-sm);
   }
 }
+
+@media (width<80em) {
+  nav {
+    max-width: 375px;
+  } 
+}

@@ -37,3 +37,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+@media (width<80em) {
+  :root {
+    --text-xl: 700 2rem/125% 'Syne', sans-serif; 
+    --text-lg: 700 1.5rem/120% 'Syne', sans-serif;
+    --text-base: 500 1rem/150% 'Montserrat', sans-serif; 
+    --text-sm: 500 .75rem/150% 'Montserrat', sans-serif; 
+    --text-logo: 700 1.25rem/130% 'Syne', sans-serif;
+  }
+  
+}

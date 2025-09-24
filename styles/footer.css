@@ -100,3 +100,23 @@ footer {
     }
   }
 }
+
+@media (width<80em) {
+
+  footer {
+    max-width: 375px;
+    padding: 3rem 1.5rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+
+    & nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      margin-left: 0;
+      gap: 1.5rem;
+    }
+  }
+  
+}
