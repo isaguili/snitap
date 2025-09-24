@@ -1,0 +1,63 @@
+body {
+  overflow-x: hidden;
+}
+
+#banner {
+  
+ & .scroller {
+  display: flex;
+  align-items: center;
+  
+  width: calc(100vw + 133px);
+  height: 3.5rem;
+  
+  animation: rolling 2s linear infinite;
+  
+  position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      
+      background: linear-gradient(
+        45deg,
+        var(--snitap-sky-light),
+        var(--snitap-joy-light)
+      );
+
+      background-size: 400%;
+      background-position: 0 50%;
+
+      animation: gradient 20s ease infinite;  
+    }
+
+    & .rolling {
+      width: 100%;
+      height: 1.5rem;
+
+      background: url(../assets/icons/banner.svg) repeat-x;
+      background-position: right;
+    }
+
+  }
+}
+
+@keyframes rolling {
+ 
+  to {
+    transform: translateX(-133px);
+  }
+  
+}
+
+@keyframes gradient {
+ 
+  50% {
+    background-position: 100% 50%;
+  }
+  
+}
+
+
